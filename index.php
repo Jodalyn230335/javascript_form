@@ -9,10 +9,19 @@
         </table>
 
         <script>
+            <!-- Get TABLE ELEMENT-->
             const studentTable = document
                 .getElementById("student_table");
 
-                console.log(studentTable);
+            <!-- CREATE ROW -->
+            const row1 =  studentTable.insertRow();
+
+            <!-- CREATE 2 COLUMNS (CELL) -->
+            const row1col1 = row1.insertCell();
+            const row1col2 = row1.insertCell();
+
+            row1col1.innerHTML = "Last Name";
+            row1col2.innerHTML = "First Name";  
         </script>
     </body>
 </html>
