@@ -5,10 +5,11 @@
     
     <body style="background-color: black; color:#FFF;">
         <h1> Student Record</h1>
-        <table id="student_table">
+        <table id="student_table" border="thick solid #0000FF">
         </table>
 
         <script>
+            document.getElementById("student_table").style.fontFamily = "Impact,initial,sans-serif";
             <!-- Get TABLE ELEMENT-->
             const studentTable = document
                 .getElementById("student_table");
@@ -38,6 +39,16 @@
             inputFirstName.placeholder="Insert First Name";
 
             row2col2.append(inputFirstName);
+            
+            const row3 =  studentTable.insertRow();
+            const row3col1 = row3.insertCell();
+            row3col1.colSpan ="2";
+
+            const inputSubmit = document.createElement("input");
+            inputSubmit.type = "submit";
+            inputSubmit.value = "Create Record";
+
+            row3col1.append(inputSubmit);
         </script>
     </body>
 </html>
